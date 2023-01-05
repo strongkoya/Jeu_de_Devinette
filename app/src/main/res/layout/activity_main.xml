@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="#B5B8C8"
+    tools:context=".MainActivity">
+    <Button
+        android:id="@+id/afficherScore"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Afficher les meilleurs scores"
+        android:background="@drawable/custom_button"
+        android:layout_margin="5dp"
+        android:onClick="listeScore"
+        />
+    <Button
+        android:id="@+id/nvllePartie"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Nouvelle partie"
+        android:background="@drawable/custom_button"
+        />
+
+    <RadioGroup
+        android:id="@+id/rgNiveau"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <RadioButton
+            android:id="@+id/debt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Débutant"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+
+        <RadioButton
+            android:id="@+id/exprt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Expert"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/cmc"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Commencer"
+        android:visibility="gone"
+        android:background="@drawable/custom_button"/>
+
+    <TextView
+        android:id="@+id/donner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Donner un nombre"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/nbreTente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/btnTenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tenter"
+            android:background="@drawable/custom_button"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/rsltTentative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:background="@color/blancS"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:visibility="gone"
+        />
+    <TextView
+        android:id="@+id/tempsRestant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Le temps restant est :"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/tvcompteur"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/scoreTitre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Votre score est :"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/tvscore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/historique"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Historique"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+
+    <ScrollView
+        android:id="@+id/scrView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadeScrollbars="false"
+        android:scrollbarFadeDuration="0"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@android:drawable/dialog_holo_light_frame">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/custom_button">
+
+            <TextView
+                android:id="@+id/txtHistorique"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:minLines="15"
+                android:background="@color/blancS"
+                android:textSize="18dp"
+                android:scrollbarFadeDuration="0"
+                android:fadeScrollbars="false"
+                android:layout_marginRight="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
